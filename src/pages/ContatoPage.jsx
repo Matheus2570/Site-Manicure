@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContatoPage.css";
 
 export default function ContatoPage() {
+  const [data, setData] = useState("");
+  const [hora, setHora] = useState("");
+
+  const handleAgendar = () => {
+  if (!data || !hora) {
+    alert("Por favor, selecione a data e o horário desejados.");
+    return;
+  }
+
+  // Formata a data para DD/MM/AAAA
+  const [ano, mes, dia] = data.split("-");
+  const dataFormatada = `${dia}/${mes}/${ano}`;
+
+  const mensagem = `Oi, tudo bem?\nGostaria de saber se tem disponibilidade para o dia ${dataFormatada} às ${hora}.\nPode me confirmar, por favor?`;
+
+  const url = `https://wa.me/5519989124968?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+};
+
   return (
     <section className="contato-page">
       <div className="container">
@@ -54,6 +74,42 @@ export default function ContatoPage() {
             <span className="contato-botao">Ver no mapa</span>
           </a>
 
+        </div>
+
+        {/* ================= AGENDAMENTO ================= */}
+        <div className="agendamento-wrapper">
+          <h2 className="agendamento-titulo">Agende seu horário</h2>
+          <p className="agendamento-descricao">
+            Escolha a data e o horário de preferência. Como não tenho horários fixos, 
+            combinamos a disponibilidade pelo WhatsApp.
+          </p>
+
+          <div className="agendamento-form">
+            <div className="campo">
+              <label htmlFor="data">Data</label>
+              <input
+                type="date"
+                id="data"
+                value={data}
+                onChange={(e) => setData(e.target.value)}
+                min={new Date().toISOString().split("T")[0]}
+              />
+            </div>
+
+            <div className="campo">
+              <label htmlFor="hora">Horário</label>
+              <input
+                type="time"
+                id="hora"
+                value={hora}
+                onChange={(e) => setHora(e.target.value)}
+              />
+            </div>
+
+            <button className="btn-agendar" onClick={handleAgendar}>
+              Agendar horário
+            </button>
+          </div>
         </div>
 
         {/* ================= MAPA ================= */}
