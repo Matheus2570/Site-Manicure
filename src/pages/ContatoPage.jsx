@@ -1,26 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./ContatoPage.css";
 
 export default function ContatoPage() {
   const [data, setData] = useState("");
   const [hora, setHora] = useState("");
+  const location = useLocation();
+
+  // Faz o scroll automático quando vier com #agendamento
+  useEffect(() => {
+  if (location.hash === "#agendamento") {
+    const element = document.getElementById("agendamento");
+    if (element) {
+      setTimeout(() => {
+        const yOffset = -100; // ajuste esse valor (quanto mais negativo, mais para cima)
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }, 100);
+    }
+  }
+}, [location]);
 
   const handleAgendar = () => {
-  if (!data || !hora) {
-    alert("Por favor, selecione a data e o horário desejados.");
-    return;
-  }
+    if (!data || !hora) {
+      alert("Por favor, selecione a data e o horário desejados.");
+      return;
+    }
 
-  // Formata a data para DD/MM/AAAA
-  const [ano, mes, dia] = data.split("-");
-  const dataFormatada = `${dia}/${mes}/${ano}`;
+    // Formata a data para DD/MM/AAAA
+    const [ano, mes, dia] = data.split("-");
+    const dataFormatada = `${dia}/${mes}/${ano}`;
 
-  const mensagem = `Oi, tudo bem?\nGostaria de saber se tem disponibilidade para o dia ${dataFormatada} às ${hora}.\nPode me confirmar, por favor?`;
+    const mensagem = `Oi, tudo bem?\nGostaria de saber se tem disponibilidade para o dia ${dataFormatada} às ${hora}.\nPode me confirmar, por favor?`;
 
-  const url = `https://wa.me/5519989124968?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://wa.me/5519989124968?text=${encodeURIComponent(mensagem)}`;
 
-  window.open(url, "_blank");
-};
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="contato-page">
@@ -77,7 +94,7 @@ export default function ContatoPage() {
         </div>
 
         {/* ================= AGENDAMENTO ================= */}
-        <div className="agendamento-wrapper">
+        <div className="agendamento-wrapper" id="agendamento">
           <h2 className="agendamento-titulo">Agende seu horário</h2>
           <p className="agendamento-descricao">
             Escolha a data e o horário de preferência. Como não tenho horários fixos, 

@@ -28,11 +28,6 @@ function Home() {
 
   const servicos = [
     {
-      titulo: "Alongamento em Gel",
-      subtitulo: "Unhas longas, resistentes e elegantes",
-      texto: "Ideal para quem deseja unhas longas, bonitas e com maior durabilidade, com acabamento profissional."
-    },
-    {
       titulo: "Banho de Gel",
       subtitulo: "Fortalece e protege",
       texto: "Técnica que fortalece as unhas naturais proporcionando brilho, proteção e acabamento perfeito."
@@ -41,6 +36,11 @@ function Home() {
       titulo: "Nail Art",
       subtitulo: "Detalhes únicos",
       texto: "Decorações personalizadas e criativas feitas de acordo com o estilo de cada cliente."
+    },
+    {
+      titulo: "Manicure & Pedicure",
+      subtitulo: "Cuidado completo",
+      texto: "Serviços tradicionais e infantis feitos com higiene, delicadeza e produtos de qualidade."
     }
   ];
 
@@ -57,14 +57,9 @@ function Home() {
           </p>
 
           <div className="hero-botoes">
-            <a
-              href="https://wa.me/5519989124968"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="botao-whatsapp"
-            >
+            <Link to="/contato#agendamento" className="botao-whatsapp">
               💬 Agendar horário
-            </a>
+            </Link>
 
             <a
               href="https://www.google.com/maps/place/Ma'art+Nails/@-22.9750217,-46.9804304,19z/data=!4m6!3m5!1s0x94c8cd18a49fb1dd:0x24347c31412dd8eb!8m2!3d-22.9747827!4d-46.9810777!16s%2Fg%2F11z8t3kvcx?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"

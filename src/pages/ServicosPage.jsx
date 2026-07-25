@@ -13,9 +13,9 @@ const trabalhos = [
   { img: Foto1, titulo: "Alongamento em Gel" },
   { img: Foto2, titulo: "Nail Art" },
   { img: Foto3, titulo: "Banho de Gel" },
-  { img: Foto4, titulo: "Esmaltação" },
-  { img: Foto5, titulo: "Decoração Personalizada" },
-  { img: Foto6, titulo: "Unhas Naturais" }
+  { img: Foto4, titulo: "Esmaltação tradicional" },
+  { img: Foto5, titulo: "Esmaltação infantil" },
+  { img: Foto6, titulo: "Unhas masculinas" }
 ];
 
 const precos = [
@@ -104,7 +104,7 @@ export default function ServicosPage() {
           </div>
 
           <div className="inclusos">
-            <h3>Todos os procedimentos incluem:</h3>
+            <h3>Todos os procedimentos de tratamento incluem:</h3>
             <ul>
               <li>✅ Lavagem completa</li>
               <li>✅ Hidratação</li>
