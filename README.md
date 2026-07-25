@@ -160,13 +160,13 @@ src/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/site-maart-nails.git
+git clone https://github.com/Matheus2570/Site-Manicure.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd site-maart-nails
+cd Site-Manicure
 ```
 
 Instale as dependências:
