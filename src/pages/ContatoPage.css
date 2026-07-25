@@ -1,0 +1,171 @@
+/* ====================== CONTATO PAGE ====================== */
+
+.contato-page {
+  padding: 80px 0 100px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #c24b81;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: #ffd4e4;
+  border-radius: 10px;
+  margin: 18px auto 0;
+}
+
+.contato-descricao {
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--texto-secundario);
+  max-width: 650px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+/* ====================== CARDS ====================== */
+
+.contato-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.contato-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(255, 240, 245, 0.75);
+  border: 2px solid rgba(255, 192, 203, 0.45);
+  border-radius: 28px;
+  padding: 40px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: 0.35s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-theme="dark"] .contato-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 192, 203, 0.25);
+}
+
+.contato-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  border-color: #c24b81;
+}
+
+.contato-icone {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+}
+
+.contato-card h3 {
+  font-size: 1.5rem;
+  color: #c24b81;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .contato-card h3 {
+  color: #ffd4e4;
+}
+
+.contato-card p {
+  font-size: 1.05rem;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.contato-botao {
+  display: inline-block;
+  padding: 11px 28px;
+  background: #c24b81;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.contato-card:hover .contato-botao {
+  background: #a83c6d;
+}
+
+/* ====================== MAPA ====================== */
+
+.mapa-wrapper {
+  text-align: center;
+}
+
+.mapa-titulo {
+  font-size: 2rem;
+  color: #c24b81;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .mapa-titulo {
+  color: #ffd4e4;
+}
+
+.mapa-container {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 3px solid rgba(255, 192, 203, 0.4);
+}
+
+.mapa-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .contato-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contato-descricao {
+    font-size: 1.05rem;
+  }
+
+  .mapa-container iframe {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,234 @@
+/* ====================== CONTAINER ====================== */
+
+.sobre-container {
+  max-width: 1200px;
+  margin: 50px auto 80px;
+  padding: 20px;
+}
+
+/* ====================== APRESENTAÇÃO ====================== */
+
+.sobre-apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+
+.sobre-imagem {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffd4e4;
+  box-shadow: 0 15px 40px rgba(194, 75, 129, 0.2);
+  transition: 0.4s;
+}
+
+.sobre-imagem img:hover {
+  transform: scale(1.04);
+  border-color: #c24b81;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h1 {
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+  color: #c24b81;
+  font-weight: 700;
+}
+
+.sobre-texto p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--texto-secundario);
+  margin-bottom: 18px;
+}
+
+/* ====================== MEU ESPAÇO ====================== */
+
+.sobre-espaco {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.titulo-espaco h2 {
+  font-size: 2.5rem;
+  color: #c24b81;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.titulo-espaco p {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--texto-secundario);
+}
+
+/* Galeria do espaço */
+
+.espaco-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.espaco-card {
+  height: 240px;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.espaco-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(194, 75, 129, 0.2);
+}
+
+.espaco-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.espaco-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ====================== DIFERENCIAIS ====================== */
+
+.diferenciais {
+  text-align: center;
+}
+
+.diferenciais h2 {
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+  color: #c24b81;
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.card {
+  width: 300px;
+  padding: 35px 28px;
+  border-radius: 25px;
+  background: rgba(255, 240, 245, 0.7);
+  border: 2px solid rgba(255, 192, 203, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(194, 75, 129, 0.18);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  color: #c24b81;
+}
+
+.card p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--texto-secundario);
+  margin: 0;
+}
+
+/* ====================== DARK MODE ====================== */
+
+[data-theme="dark"] .sobre-texto h1,
+[data-theme="dark"] .titulo-espaco h2,
+[data-theme="dark"] .diferenciais h2,
+[data-theme="dark"] .card h3 {
+  color: #ffd4e4;
+}
+
+[data-theme="dark"] .sobre-imagem img {
+  border-color: rgba(255, 212, 228, 0.5);
+}
+
+[data-theme="dark"] .card {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 192, 203, 0.25);
+}
+
+[data-theme="dark"] .espaco-card {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 1000px) {
+  .espaco-galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-apresentacao {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .sobre-imagem img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .espaco-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .sobre-container {
+    padding: 15px;
+  }
+
+  .sobre-imagem img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .sobre-texto h1 {
+    font-size: 2.1rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1.05rem;
+  }
+
+  .espaco-galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .espaco-card {
+    height: 280px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

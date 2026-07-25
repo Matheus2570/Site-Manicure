@@ -1,0 +1,128 @@
+.footer {
+  padding: 60px 5% 30px;
+  margin-top: 100px;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  background-color: rgba(255, 182, 193, 0.18);
+  border-top: 1px solid rgba(255, 182, 193, 0.35);
+  box-shadow: 0 -8px 32px rgba(255, 182, 193, 0.18);
+
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+[data-theme="dark"] .footer {
+  background-color: rgba(70, 40, 60, 0.45);
+  border-top-color: rgba(255, 182, 193, 0.25);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.footer h4 {
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  color: #c24b81;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .footer h4 {
+  color: #ffd4e4;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.88;
+  transition: all 0.3s ease;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+  color: #c24b81;
+  padding-left: 6px;
+}
+
+[data-theme="dark"] .footer ul li a:hover {
+  color: #ffd4e4;
+}
+
+.footer-right p {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.footer-right a:hover {
+  color: #c24b81;
+}
+
+[data-theme="dark"] .footer-right a:hover {
+  color: #ffd4e4;
+}
+
+.footer-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  max-width: 90vw;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.footer-logo:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Barra de copyright */
+.footer-bottom {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 22px;
+  text-align: center;
+  border-top: 1px solid rgba(194, 75, 129, 0.2);
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 5% 25px;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer ul li a:hover {
+    padding-left: 0;
+  }
+}
