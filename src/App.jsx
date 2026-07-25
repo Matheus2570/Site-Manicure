@@ -12,6 +12,8 @@ import NavBar from "./components/navBar.jsx";
 import Footer from "./components/footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
+// Teste
+
 function App() {
   return (
     <BrowserRouter>
