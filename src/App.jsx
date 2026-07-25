@@ -3,14 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Páginas
 import Home from "./pages/HomePage.jsx";
-import Sobre from "./pages/SobrePage.jsx";
+import Sobre from "./pages/Sobrepage.jsx";
 import Servicos from "./pages/ServicosPage.jsx";
 import Contato from "./pages/ContatoPage.jsx";
 
 // Componentes
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
+import NavBar from "./components/navBar.jsx";
+import Footer from "./components/footer.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
   return (
