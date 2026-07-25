@@ -2,12 +2,12 @@ import React from "react";
 import "./ServicosPage.css";
 
 // Troque pelas fotos reais
-import Foto1 from "../assets/Logo.png";
-import Foto2 from "../assets/Logo.png";
-import Foto3 from "../assets/Logo.png";
-import Foto4 from "../assets/Logo.png";
-import Foto5 from "../assets/Logo.png";
-import Foto6 from "../assets/Logo.png";
+import Foto1 from "../assets/logo.png";
+import Foto2 from "../assets/logo.png";
+import Foto3 from "../assets/logo.png";
+import Foto4 from "../assets/logo.png";
+import Foto5 from "../assets/logo.png";
+import Foto6 from "../assets/logo.png";
 
 const trabalhos = [
   { img: Foto1, titulo: "Alongamento em Gel" },

@@ -1,19 +1,19 @@
 import "./SobrePage.css";
 
-import FotoPerfil from "../assets/Perfil.jpeg";
+import FotoPerfil from "../assets/perfil.jpeg";
 
-import Espaco1 from "../assets/Espaco1.jpeg";
-import Espaco2 from "../assets/Espaco2.jpeg";
-import Espaco3 from "../assets/Espaco3.jpeg";
-import Espaco4 from "../assets/Espaco4.jpeg";
-import Espaco7 from "../assets/Espaco7.jpeg";
-import Espaco8 from "../assets/Espaco8.jpeg";
-import Espaco9 from "../assets/Espaco9.jpeg";
-import Espaco10 from "../assets/Espaco10.jpeg";
+import Espaco1 from "../assets/espaco1.jpeg";
+import Espaco2 from "../assets/espaco2.jpeg";
+import Espaco3 from "../assets/espaco3.jpeg";
+import Espaco4 from "../assets/espaco4.jpeg";
+import Espaco5 from "../assets/espaco5.jpeg";
+import Espaco6 from "../assets/espaco6.jpeg";
+import Espaco7 from "../assets/espaco7.jpeg";
+import Espaco8 from "../assets/espaco8.jpeg";
 
 const fotosEspaco = [
-  Espaco1, Espaco2, Espaco3, Espaco4,
-  Espaco7, Espaco8, Espaco9, Espaco10
+  Espaco2, Espaco5, Espaco7, Espaco3,
+  Espaco8, Espaco6, Espaco4, Espaco1
 ];
 
 export default function SobrePage() {

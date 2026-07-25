@@ -79,14 +79,14 @@
 
 .espaco-galeria {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .espaco-card {
-  height: 240px;
+  height: 400px;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 25px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: 0.4s;
 }
