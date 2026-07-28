@@ -1,5 +1,21 @@
-*{
-    font-family: 'Times New Roman', Times, serif ;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tituloSite {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 3.1em;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tituloSite:hover {
+  transform: scale(1.04);
 }

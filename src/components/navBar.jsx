@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import "./navBar.css";
 import BotaoMudarTema from "./botaoMudaTema";
+import logo from "../assets/logo.png";   // ← ajuste o caminho se necessário
+
 
 export default function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -11,10 +13,10 @@ export default function NavBar() {
   const handleClick = () => setMenuAberto(false);
 
   const titulos = {
-    "/": "💅 Ma'art Nails",
-    "/sobre": "✨ Sobre",
-    "/servicos": "💅 Serviços",
-    "/contato": "📱 Contato",
+    "/": "Ma'art Nails",
+    "/sobre": " Sobre",
+    "/servicos": " Serviços",
+    "/contato": " Contato",
   };
 
   const tituloAtual = titulos[location.pathname] || "Ma'art Nails";
@@ -22,7 +24,17 @@ export default function NavBar() {
   return (
     <nav className="navBar">
       <div className="navTopo">
-        <h1 className="tituloSite">{tituloAtual}</h1>
+        {/* Logo + Título */}
+        <div className="logoTitulo">
+          <Link to="/" onClick={handleClick} className="logoLink">
+          <img
+  src={logo}
+  alt="Ma'art Nails"
+  className="logo"
+/>
+          </Link>
+          <h1 className="tituloSite">{tituloAtual}</h1>
+        </div>
 
         <div className="tituloComBotao">
           <i
@@ -43,19 +55,16 @@ export default function NavBar() {
                 🏠 Início
               </Link>
             </li>
-
             <li>
               <Link to="/sobre" onClick={handleClick} className="navLink">
                 ✨ Sobre
               </Link>
             </li>
-
             <li>
               <Link to="/servicos" onClick={handleClick} className="navLink">
                 💅 Serviços
               </Link>
             </li>
-
             <li>
               <Link to="/contato" onClick={handleClick} className="navLink">
                 📱 Contato

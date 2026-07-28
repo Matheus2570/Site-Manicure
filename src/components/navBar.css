@@ -17,10 +17,31 @@
   padding: 0 5%;
 }
 
-.tituloComBotao {
+/* ===== LOGO + TÍTULO ===== */
+.logoTitulo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .tituloSite {
@@ -28,6 +49,13 @@
   font-size: 2.5em;
   font-weight: 600;
   transition: color 0.3s ease;
+}
+
+/* ===== BOTÕES DIREITA ===== */
+.tituloComBotao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Ícones */
@@ -49,7 +77,7 @@
   top: 100%;
   right: 5%;
 
-  width: 250px; /* aumentei um pouco */
+  width: 250px;
 
   padding: 10px;
 
@@ -70,7 +98,7 @@
 }
 
 .menu-opcoes li {
-  margin: 4px 0; /* diminui um pouco o espaço */
+  margin: 4px 0;
 }
 
 .menu-opcoes a {
@@ -153,9 +181,13 @@
 ======================= */
 
 @media (max-width: 768px) {
-
   .tituloSite {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    height: 48px;
+    width: 48px;
   }
 
   .menu-opcoes {
@@ -163,18 +195,24 @@
     width: 100%;
     border-radius: 0;
   }
-
 }
 
 @media (max-width: 480px) {
-
   .tituloSite {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 55px;
+    width: 55px;
+  }
+
+  .logoTitulo {
+    gap: 10px;
   }
 
   .bx-menu,
   .bx-x {
     font-size: 2.2rem;
   }
-
 }
