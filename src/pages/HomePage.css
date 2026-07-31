@@ -172,13 +172,20 @@
 
 .imagem-sobre {
   width: 280px;
-  height: 280px;
+  height: 360px;                 /* mais alto → melhor para foto vertical */
   border-radius: 25px;
   object-fit: cover;
+  object-position: center 25%;   /* enquadra um pouco mais para cima */
   flex-shrink: 0;
-  border: 5px solid #ffd4e4;
+  border: 4px solid #ffd4e4;
   box-shadow: var(--shadow-sm);
   transition: 0.4s;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] .imagem-sobre {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .bloco-card:hover .imagem-sobre {
@@ -349,9 +356,9 @@
   }
 
   .imagem-sobre {
-    width: 220px;
-    height: 220px;
-  }
+  width: 240px;
+  height: 310px;
+}
 
   .titulo-sobre,
   .section-title {
@@ -371,9 +378,9 @@
   }
 
   .imagem-sobre {
-    width: 180px;
-    height: 180px;
-  }
+  width: 200px;
+  height: 260px;
+}
 
   .titulo-sobre,
   .section-title {

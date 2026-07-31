@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 // Troque essas imagens pelas fotos reais dos trabalhos
-import Trabalho1 from "../assets/logo.png";
-import Trabalho2 from "../assets/logo.png";
+import Trabalho1 from "../assets/AlongamentoGel.jpeg";
+import Trabalho2 from "../assets/CuidadosEBeleza.jpeg";
 
 function Home() {
   const destaques = [
