@@ -102,39 +102,93 @@
   margin-top: 15px;
 }
 
-/* ====================== INCLUSOS ====================== */
+/* ====================== PODOLOGIA E TERAPIAS - CARDS ====================== */
 
-.inclusos {
-  background: rgba(255, 240, 245, 0.6);
-  border: 2px solid rgba(255, 192, 203, 0.4);
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 500px;
-  margin: 40px auto 0;
-  text-align: center;
+.terapias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 20px;
 }
 
-[data-theme="dark"] .inclusos {
+.terapia-card {
+  background: rgba(255, 240, 245, 0.7);
+  border: 2px solid rgba(255, 192, 203, 0.4);
+  border-radius: 20px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+[data-theme="dark"] .terapia-card {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 192, 203, 0.25);
 }
 
-.inclusos h3 {
-  color: #c24b81;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+.terapia-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
 
-.inclusos ul {
+.terapia-card h3 {
+  color: #c24b81;
+  font-size: 1.2rem;
+  margin: 0 0 16px 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.incluso-lista {
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+.incluso-lista strong {
+  display: block;
+  color: #c24b81;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.incluso-lista ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.inclusos li {
-  font-size: 1.1rem;
-  margin: 8px 0;
+.incluso-lista li {
+  font-size: 0.9rem;
   color: var(--texto-secundario);
+  margin-bottom: 6px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.incluso-lista li::before {
+  content: "•";
+  color: #c24b81;
+  position: absolute;
+  left: 0;
+}
+
+.precos-terapia {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid rgba(194, 75, 129, 0.2);
+  padding-top: 14px;
+  margin-top: auto;
+}
+
+.precos-terapia span {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+}
+
+.precos-terapia strong {
+  color: #c24b81;
 }
 
 /* ====================== GALERIA ====================== */
@@ -188,35 +242,7 @@
   margin: 0;
 }
 
-/* ====================== RESPONSIVO ====================== */
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .subtitulo {
-    font-size: 1.7rem;
-  }
-
-  .galeria-card img {
-    height: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.9rem;
-  }
-
-  .tabela-precos th,
-  .tabela-precos td {
-    padding: 12px 14px;
-    font-size: 0.95rem;
-  }
-}
-
-/* ====================== CARROSSEL NAIL ART (estilo card) ====================== */
+/* ====================== CARROSSEL ====================== */
 
 .carousel-card {
   display: flex;
@@ -226,9 +252,9 @@
 .carousel-inner {
   position: relative;
   width: 100%;
-  height: 320px;          /* mesma altura dos outros cards */
+  height: 320px;
   overflow: hidden;
-  touch-action: pan-y;   /* ← adiciona esta linha */
+  touch-action: pan-y;
 }
 
 .carousel-track {
@@ -246,7 +272,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;          /* espaço para a imagem não colar nas bordas */
+  padding: 12px;
   box-sizing: border-box;
 }
 
@@ -259,11 +285,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;    /* deixa a foto um pouco arredondada dentro do card */
+  border-radius: 12px;
   display: block;
 }
 
-/* Botões de seta */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -298,7 +323,6 @@
   right: 10px;
 }
 
-/* Bolinhas */
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -326,8 +350,28 @@
   background: #c24b81;
 }
 
-/* Responsivo */
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 1100px) {
+  .terapias-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .subtitulo {
+    font-size: 1.7rem;
+  }
+
+  .terapias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-card img,
   .carousel-inner {
     height: 280px;
   }
@@ -340,6 +384,20 @@
 }
 
 @media (max-width: 480px) {
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .terapias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabela-precos th,
+  .tabela-precos td {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
   .carousel-inner {
     height: 250px;
   }

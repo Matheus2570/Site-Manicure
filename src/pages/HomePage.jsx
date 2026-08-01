@@ -3,44 +3,49 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 // Troque essas imagens pelas fotos reais dos trabalhos
-import Trabalho1 from "../assets/AlongamentoGel.jpeg";
+import Trabalho1 from "../assets/EsmaltacaoTradicional.jpeg";
 import Trabalho2 from "../assets/CuidadosEBeleza.jpeg";
+import Trabalho3 from "../assets/NailArt8.jpeg";
+import Trabalho4 from "../assets/Auriculoterapia .jpeg";
+import Trabalho5 from "../assets/NailArt1.jpeg";
+
 
 function Home() {
   const destaques = [
     {
-      title: "Alongamento em Gel",
+      title: "Esmaltação tradicional",
       img: Trabalho1,
       text: [
-        "Alongamentos com acabamento profissional, resistência e beleza para valorizar seu estilo.",
-        "Cada procedimento é feito pensando no estilo e preferência de cada cliente."
+        "Cuidado especializado com as unhas e uma esmaltação linda que realça sua beleza. Acabamento impecável, produtos antialérgicos, atendimento personalizado e resultados incríveis."
       ]
     },
     {
-      title: "Cuidados e Beleza",
+      title: "Atendimento infantil, masculino e geriátrico",
       img: Trabalho2,
       text: [
-        "Procedimentos personalizados feitos com cuidado, higiene e produtos de qualidade.",
-        "Um atendimento delicado para deixar suas unhas ainda mais bonitas e saudáveis."
+        "O cuidado com a beleza e saúde não se limita apenas a mulheres adultas. Aqui trabalho com amor e carinho atendendo o público infantil, masculino e geriátrico. Todos os atendimentos são personalizados e adequados a cada cliente, garantindo excelência."
       ]
-    }
-  ];
-
-  const servicos = [
-    {
-      titulo: "Banho de Gel",
-      subtitulo: "Fortalece e protege",
-      texto: "Técnica que fortalece as unhas naturais proporcionando brilho, proteção e acabamento perfeito."
     },
     {
-      titulo: "Nail Art",
-      subtitulo: "Detalhes únicos",
-      texto: "Decorações personalizadas e criativas feitas de acordo com o estilo de cada cliente."
+      title: "Podologia completa",
+      img: Trabalho3,
+      text: [
+        "Podologia não é apenas para os pés em apuros; para mantê-los saudáveis ela é inegociável. Ma'art Nails garante um atendimento humanizado com excelência, qualidade incomparável e uma saúde garantida para seus pés."
+      ]
     },
     {
-      titulo: "Manicure & Pedicure",
-      subtitulo: "Cuidado completo",
-      texto: "Serviços tradicionais e infantis feitos com higiene, delicadeza e produtos de qualidade."
+      title: "Terapias integrativas",
+      img: Trabalho4,
+      text: [
+        "Para manter uma beleza externa é necessário saúde interna. As terapias integrativas são um caminho de cuidado com seu interior de forma tranquila e eficiente, proporcionando relaxamento e cuidado paralelamente."
+      ]
+    },
+    {
+      title: "Decorações personalizadas",
+      img: Trabalho5,
+      text: [
+        "Unhas básicas são lindas, mas decorações trazem personalidade e beleza de uma forma transformadora! Basta escolher sua referência e transformo suas unhas em uma obra de arte."
+      ]
     }
   ];
 
@@ -50,7 +55,7 @@ function Home() {
       {/* ================= HERO ================= */}
       <section className="hero">
         <div className="hero-texto">
-          <h1>Realçando sua beleza através das unhas</h1>
+          <h1>Realçando sua beleza e cuidando da sua saúde</h1>
 
           <p>
             Atendimento personalizado, técnicas modernas e muito cuidado em cada detalhe.
@@ -81,7 +86,7 @@ function Home() {
           {destaques.map((card, index) => (
             <article
               key={index}
-              className={`bloco-card ${index === 1 ? "reverse" : ""}`}
+              className={`bloco-card ${index % 2 === 1 ? "reverse" : ""}`}
             >
               <img
                 src={card.img}
@@ -101,26 +106,9 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= SERVIÇOS PRINCIPAIS ================= */}
+      {/* ================= BOTÃO VER SERVIÇOS ================= */}
       <section className="objetivos-section">
         <div className="container">
-          <h2 className="section-title">Serviços</h2>
-
-          <div className="objetivos-grid">
-            {servicos.map((servico, index) => (
-              <article className="objetivo-card" key={index}>
-                <div className="card-header">
-                  <h3>{servico.subtitulo}</h3>
-                </div>
-
-                <div className="card-body">
-                  <h4>{servico.titulo}</h4>
-                  <p>{servico.texto}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
           <div className="ver-todos-wrap">
             <Link to="/servicos" className="botao-ver-todos">
               Ver todos os serviços e valores

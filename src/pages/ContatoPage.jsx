@@ -8,12 +8,15 @@ export default function ContatoPage() {
   const location = useLocation();
 
   // Faz o scroll automático quando vier com #agendamento
-  useEffect(() => {
+useEffect(() => {
   if (location.hash === "#agendamento") {
     const element = document.getElementById("agendamento");
     if (element) {
       setTimeout(() => {
-        const yOffset = -100; // ajuste esse valor (quanto mais negativo, mais para cima)
+        // Offset diferente para desktop e mobile
+        const isMobile = window.innerWidth <= 768;
+        const yOffset = isMobile ? -100 : -175;
+
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         
         window.scrollTo({ top: y, behavior: "smooth" });

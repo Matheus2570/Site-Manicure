@@ -25,7 +25,7 @@ export default function SobrePage() {
         <div className="sobre-imagem">
           <img
             src={FotoPerfil}
-            alt="Foto de perfil da Maria - Ma'art Nails"
+            alt="Foto de perfil da Maria Clara - Ma'art Nails"
           />
         </div>
 
@@ -33,14 +33,12 @@ export default function SobrePage() {
           <h1>Sobre Mim</h1>
 
           <p>
-            Olá! Meu nome é <strong>Maria</strong>.
-            Sou apaixonada pelo universo da beleza e especializada em cuidados para unhas,
-            buscando sempre oferecer um atendimento profissional, delicado e personalizado.
+            Olá! Meu nome é <strong>Maria Clara</strong>. Sou apaixonada pelo universo da saúde e beleza.
           </p>
 
           <p>
-            Meu objetivo é proporcionar uma experiência especial para cada cliente,
-            unindo qualidade, higiene, conforto e muito carinho em cada procedimento realizado.
+            Sou podologista, terapeuta integrativa e amo misturar arte nesse meio.
+            Procuro trazer em meus atendimentos profissionalismo, delicadeza e qualidade.
           </p>
         </div>
       </section>
