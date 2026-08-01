@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./ServicosPage.css";
 
 // Imagens dos trabalhos
-import Foto1 from "../assets/Auriculoterapia .jpeg";
+import Foto1 from "../assets/Auriculoterapia.jpeg";
 import Foto3 from "../assets/Moxaterapia.jpeg";
 import Foto4 from "../assets/EsmaltacaoTradicional.jpeg";
 import Foto5 from "../assets/EsmaltacaoInfantil.jpeg";
