@@ -5,8 +5,8 @@ import "./HomePage.css";
 // Troque essas imagens pelas fotos reais dos trabalhos
 import Trabalho1 from "../assets/EsmaltacaoTradicional.jpeg";
 import Trabalho2 from "../assets/CuidadosEBeleza.jpeg";
-import Trabalho3 from "../assets/NailArt8.jpeg";
-import Trabalho4 from "../assets/Auriculoterapia .jpeg";
+import Trabalho3 from "../assets/PodologiaCompleta.jpg";
+import Trabalho4 from "../assets/Auriculoterapia.jpeg";
 import Trabalho5 from "../assets/NailArt1.jpeg";
 
 
