@@ -240,6 +240,8 @@
 
 /* ====================== RESPONSIVO ====================== */
 
+/* ====================== RESPONSIVO ====================== */
+
 @media (max-width: 768px) {
   .hero {
     padding: 45px 25px;
@@ -263,12 +265,22 @@
   .bloco-card.reverse {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 40px;                 /* ← aumentei de 30px para 40px */
+    padding: 32px 24px;        /* um pouco menos de padding lateral */
   }
 
   .imagem-sobre {
     width: 240px;
     height: 310px;
+    margin-bottom: 4px;        /* pequeno respiro extra */
+  }
+
+  .texto-sobre {
+    padding-top: 8px;          /* garante que o texto não fique colado */
+  }
+
+  .texto-sobre h3 {
+    margin-bottom: 1.2rem;
   }
 
   .titulo-sobre {
@@ -302,7 +314,11 @@
   }
 
   .texto-sobre h3 {
-  font-size: 1.8rem;
-  
-}
+    font-size: 1.8rem;
+  }
+
+  .bloco-card,
+  .bloco-card.reverse {
+    gap: 36px;                 /* um pouco menor em telas bem estreitas */
+  }
 }
