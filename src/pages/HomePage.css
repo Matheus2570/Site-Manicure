@@ -317,8 +317,17 @@
     font-size: 1.8rem;
   }
 
+  @media (max-width: 480px) {
+  /* ... */
+
   .bloco-card,
   .bloco-card.reverse {
-    gap: 36px;                 /* um pouco menor em telas bem estreitas */
+    gap: 36px;
+    padding: 28px 20px 36px;
   }
+
+  .texto-sobre {
+    min-height: 220px;         /* um pouco menor em telas estreitas */
+  }
+}
 }
