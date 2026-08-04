@@ -19,3 +19,29 @@
 .tituloSite:hover {
   transform: scale(1.04);
 }
+
+/* ====================== DESATIVA SELEÇÃO DE TEXTO ====================== */
+html, body, 
+p, h1, h2, h3, h4, h5, h6,
+span, div, a, li, 
+.home-page, .section-a, .bloco-card, .texto-sobre,
+.hero, .hero-texto {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none; /* remove o menu nativo do iOS/Android */
+}
+
+/* Remove o destaque azul ao tocar */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Permite seleção apenas em campos de formulário (se tiver) */
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
