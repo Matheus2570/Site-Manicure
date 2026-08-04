@@ -300,4 +300,9 @@
     width: 100%;
     max-width: 320px;
   }
+
+  .texto-sobre h3 {
+  font-size: 1.8rem;
+  
+}
 }
